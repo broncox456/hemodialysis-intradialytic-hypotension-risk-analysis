@@ -1,0 +1,7 @@
+﻿metric,value
+raw_rows,415.0
+rows_after_dedup_and_cleaning,394.0
+rows_removed,21.0
+unique_patients,52.0
+idh_events,170.0
+idh_rate,0.4315

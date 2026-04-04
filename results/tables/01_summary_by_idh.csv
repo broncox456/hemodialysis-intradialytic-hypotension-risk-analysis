@@ -1,0 +1,5 @@
+﻿,ufr_ml_kg_h,ufr_ml_kg_h,idwg_kg,idwg_kg,hb_gdl,hb_gdl,pam_pre,pam_pre,pam_final,pam_final,delta_pam_90,delta_pam_90,drop_sys_max,drop_sys_max,bolo_salino,bolo_salino,pausa_uf,pausa_uf,fin_anticipado,fin_anticipado,fevi_reducida,fevi_reducida,infeccion_3m,infeccion_3m
+,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median,mean,median
+idh,,,,,,,,,,,,,,,,,,,,,,,,
+0,7.34,7.15,1.95,2.0,9.38,9.3,98.01,97.3,84.05,84.5,-10.01,-7.4,18.43,14.0,0.35,0.0,0.33,0.0,0.15,0.0,0.28,0.0,0.29,0.0
+1,7.91,7.65,2.03,2.0,9.42,9.3,98.04,98.7,85.03,86.7,-9.4,-6.15,17.25,12.5,0.35,0.0,0.32,0.0,0.17,0.0,0.3,0.0,0.26,0.0
