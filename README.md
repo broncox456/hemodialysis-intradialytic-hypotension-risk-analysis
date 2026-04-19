@@ -1,6 +1,7 @@
-
+﻿
 # Hemodialysis Intradialytic Hypotension Risk Analysis
-### Patient-Level Hemodynamic Phenotyping Using Real-World Dialysis Data
+
+### Real-World Hemodialysis Data Analysis for Intradialytic Hypotension Risk and Patient-Level Phenotyping
 
 ![Patient Clusters](results/figures/patient_clusters.png)
 
@@ -24,6 +25,16 @@ To analyze real-world hemodialysis data in order to:
 - Develop a simple clinical risk score
 - Characterize patient phenotypes using clustering techniques
 
+## Key Insights (Quick View)
+
+- IDH rate was high (43%), confirming significant intradialytic instability
+- Traditional predictors (UFR, IDWG, hemoglobin) showed **limited discrimination**
+- Patient-level clustering identified **3 distinct hemodynamic phenotypes**
+- The most unstable phenotype was **NOT driven by high UFR**
+- Suggests IDH is primarily **patient-specific, not session-driven**
+
+👉 This challenges the traditional dialysis paradigm and supports a **phenotype-based risk stratification approach**
+
 ---
 
 ## Data Source
@@ -42,6 +53,14 @@ The dataset includes:
 - **394 dialysis sessions**
 - **52 patients**
 - Longitudinal patient-level data
+
+## Study Design
+
+- Observational retrospective analysis
+- Real-world dialysis machine-derived data
+- Session-level and patient-level feature extraction
+- Longitudinal aggregation per patient
+- Unsupervised clustering for phenotype discovery
 ---
 
 ## Methods
@@ -162,44 +181,6 @@ This pattern supports the concept that intradialytic hypotension may reflect pat
 ![Delta MAP 90 by IDH](results/figures/04_delta_pam90_by_idh.png)
 ---
 
-### Session-Level Variables
-
-No strong differences were observed between IDH and non-IDH sessions:
-
-- UFR: minimal increase in IDH group
-- IDWG: negligible difference
-- Hemoglobin: no meaningful separation
-
----
-
-### Risk Score Performance
-
-The proposed score showed limited discrimination between risk groups, suggesting that traditional variables alone are insufficient to predict IDH.
-
----
-
-### Patient-Level Clustering
-
-Three distinct phenotypes were identified:
-
-#### 1. Relatively Stable Patients
-- Lower IDH rates
-- Mild hemodynamic changes
-- Moderate UFR
-
-#### 2. High UFR Exposure Group
-- Elevated UFR values
-- No proportional hemodynamic collapse
-- Suggests preserved cardiovascular compensation
-
-#### 3. Hemodynamically Unstable Patients
-- Significant MAP reduction
-- High systolic drop
-- Increased saline use
-- Not explained by UFR
-
----
-
 ## Discussion
 
 In this analysis of real-world hemodialysis data from a dialysis unit in the Dominican Republic, we observed a high prevalence of intradialytic hypotension (IDH), affecting approximately 43% of sessions.
@@ -250,35 +231,60 @@ This approach provides a more clinically meaningful framework for understanding 
 
 ---
 
-## Project structure
+## Project Structure
 
+```text
+.
 ├── data/
-│ ├── raw/
-│ ├── processed/
-│
+│   ├── raw/
+│   └── processed/
 ├── scripts/
-│ ├── 01_cleaning.py
-│ ├── 02_analysis.py
-│ ├── 03_visualization.py
-│ ├── 04_risk_score.py
-│ ├── 05_clustering.py
-│
+│   ├── 01_cleaning.py
+│   ├── 02_analysis.py
+│   ├── 03_visualization.py
+│   ├── 04_risk_score.py
+│   └── 05_clustering.py
 ├── results/
-│ ├── figures/
-│ ├── tables/
-│
-├── README.md
+│   ├── figures/
+│   └── tables/
+└── README.md
 
----
-## Reproducibility
 
-The analysis pipeline includes data cleaning, descriptive analysis, visualization, risk score generation, and patient-level clustering using Python scripts stored in the `scripts/` directory.
+##  Reproducibility
+
+Requirements:
+
+pip install -r requirements.txt
+
+
+## Execution Order :
+
+-python scripts/01_cleaning.py
+-python scripts/02_analysis.py
+-python scripts/03_visualization.py
+-python scripts/04_risk_score.py
+-python scripts/05_clustering.py
+
+## Outputs generated :
+
+Clean dataset: data/processed/hd_clean.csv
+Tables: results/tables/
+Figures: results/figures/
+Risk score dataset: 07_hd_with_risk_score.csv
+Patient clustering: 10_patient_clusters.csv
 
 The raw source file is not shared publicly. Processed data and derived outputs are included to support project reproducibility.
 
-## Author
+Author
 
 Cristian Arias, MD  
 Nephrologist |  Healthcare and Clinical Data Analyst  
 Bioinformatics MSc
+
+
+
+
+
+
+
 
