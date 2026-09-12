@@ -275,16 +275,16 @@ Patient clustering: 10_patient_clusters.csv
 
 The raw source file is not shared publicly. Processed data and derived outputs are included to support project reproducibility.
 
-Author
+---
 
-Cristian Arias, MD  
-Nephrologist |  Healthcare and Clinical Data Analyst  
-Bioinformatics MSc
+## Scope and Disclaimer
 
+**Status:** retrospective observational analysis — hypothesis-generating. Not a validated clinical tool, not a medical device, no regulatory clearance. Results must not be used for patient-level decisions. The exploratory machine-learning model derived from this work was presented as a poster and oral conference at the XIV Congreso Dominicano de Nefrología / VI Encuentro Mayo Clinic (2025); a manuscript is in preparation.
 
+**Data provenance:** de-identified hemodialysis session records extracted from dialysis machines at a single Dominican unit. The raw source file is not shared; only processed, de-identified data and derived outputs are included. No identifiable patient data are published in this repository.
 
+## Author
 
+**Cristian Arias Ramírez, MD, MSc** — Nephrologist & Internal Medicine Specialist · MSc Bioinformatics and Precision Medicine (Universidad Alfonso X el Sabio, 2026)
 
-
-
-
+[LinkedIn](https://www.linkedin.com/in/cristian-arias-healthcare-data/) · [Full portfolio](https://github.com/broncox456)
